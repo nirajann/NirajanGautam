@@ -7,54 +7,46 @@ const Qualification = () => {
   return (
     <>
 
-<h1 className="Qtitle">Education<span>timeline</span></h1>
+<h1 className="Qtitle">Education<span> Timeline</span></h1>
 
 <div class="Qcontainer">
 
    <div class="timeline-block timeline-block-right">
       <div class="marker"></div>
       <div class="timeline-content">
-         <h3>First Year</h3>
-         <span>Some work experience</span>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+         <h3>Secondary School</h3>
+         <span>Sai shiksha Niketan Boarding High School</span>
+         <p>Passed Date : 2018</p>
       </div>
    </div>
 
    <div class="timeline-block timeline-block-left">
       <div class="marker"></div>
       <div class="timeline-content">
-         <h3>Seconed Year</h3>
-         <span>Some work experience</span>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+         <h3>Higher Secondary</h3>
+         <span>Golden Gate International College</span>
+         <p>Passed Date : 2020</p>
       </div>
    </div>
 
    <div class="timeline-block timeline-block-right">
       <div class="marker"></div>
       <div class="timeline-content">
-         <h3>Third Year</h3>
-         <span>Some work experience</span>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+         <h3>UnderGraduate</h3>
+         <span>Softwarica College</span>
+         <p>Passed Date : 2023</p>
       </div>
    </div>
 
    <div class="timeline-block timeline-block-left">
       <div class="marker"></div>
       <div class="timeline-content">
-         <h3>Fourth Year</h3>
-         <span>Some work experience</span>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+         <h3>Master</h3>
+         <span>Processing For Austrilia</span>
+         <p>pending...</p>
       </div>
    </div>
 
-   <div class="timeline-block timeline-block-right">
-      <div class="marker"></div>
-      <div class="timeline-content">
-         <h3>Fifth Year</h3>
-         <span>Some work experience</span>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-      </div>
-   </div>
 </div>
 
     </>

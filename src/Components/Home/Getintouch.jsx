@@ -11,10 +11,27 @@ import {
 import gsap from "gsap";
 import emailjs from "emailjs-com";
 import CV from '../assets/Docx/CV.docx'; 
-import Header from "../Layout/Header"
+import { animateScroll as scroll } from "react-scroll";
+import Qualifiation from "../Home/Qualification"
 
 const GetInTouch = () => {
   const [Email, setEmail] = useState("");
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  const handleNavClick = (section) => {
+    setIsOverlayOpen(false);
+    if (location.pathname !== "/") {
+      window.location.href = `/#${section}`;
+    } else {
+      const element = document.getElementById(section);
+      if (element) {
+        scroll.scrollTo(element.offsetTop, {
+          duration: 500,
+          smooth: true,
+        });
+      }
+    }
+  };
 
   useEffect(() => {
     const hero = document.querySelector("[data-hero]");
@@ -119,11 +136,49 @@ const GetInTouch = () => {
     e.target.reset();
   };
 
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => handleNavClick(link.id));
+    });
+
+    // Cleanup on component unmount
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', () => handleNavClick(link.id));
+      });
+    };
+  }, []);
+
   return (
     <>
-   <Header
-      />
+   {/* <Header
+      /> */}
 
+<nav class="navsab vertical">
+  <ul>
+    <li>
+      <a href="#">
+        <i class="material-icons">Home</i>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+         <i class="material-icons">Projects</i>
+      </a>
+    </li>
+    <li>
+      <a onClick={() => handleNavClick("Qualifiation")}>
+         <i class="material-icons">Education</i>
+      </a>
+    </li>
+    <li>
+      <a onClick={() => handleNavClick("SendCv")}>
+         <i class="material-icons">Sendmail</i>
+      </a>
+    </li>
+  </ul>
+</nav>
       <div className="wrapper">
         <div className="hero">
           <p className="hero__heading" onClick={handleDownloadCV}>
@@ -183,8 +238,10 @@ const GetInTouch = () => {
         </a>
       </div>
 
-    
-        <div className="SendCV">
+      <section id="Qualifiation">
+        <Qualifiation />
+      </section>
+        <div className="SendCV" id="SendCv">
           
     <h1 className="h1text">Send Mail To learn more about
       

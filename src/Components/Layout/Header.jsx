@@ -155,10 +155,12 @@ const Header = ({ scrollToContact }) => {
       <div className="background">
         <div className="header">
           <div className="headerWrapper">
+          <br></br>
             <h6>we do</h6>
             <h1>
               Web Design <br /> & Development
             </h1>
+            <br></br>
             <div className="tooltip-cont">
               <img
                 className="toolimg"

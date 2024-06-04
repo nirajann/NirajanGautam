@@ -1,94 +1,136 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap, Expo, Bounce } from "gsap";
 import "../Style/Contact.css";
 
 const Contact = () => {
-  const [expandedFields, setExpandedFields] = useState([]);
+  const signUpFormRef = useRef(null);
+  const hiddenFormBottom = useRef("-450px"); // Updated hidden position for desktop
+  const hiddenFormRight = useRef("-277px"); // Default hidden position for mobile
 
-  const handleFieldHover = (index) => {
-    setExpandedFields((prevExpandedFields) => {
-      if (!prevExpandedFields.includes(index)) {
-        return [...prevExpandedFields, index];
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        signUpFormRef.current.style.bottom = hiddenFormBottom.current;
+        signUpFormRef.current.style.right = "";
+      } else {
+        signUpFormRef.current.style.right = hiddenFormRight.current;
+        signUpFormRef.current.style.bottom = "";
       }
-      return prevExpandedFields;
-    });
-  };
+    };
 
-  const handleFieldClick = (index) => {
-    setExpandedFields((prevExpandedFields) => {
-      if (!prevExpandedFields.includes(index)) {
-        return [...prevExpandedFields, index];
+    const handleButtonClick = () => {
+      const screenWidth = window.innerWidth;
+      const formPosDesktop = signUpFormRef.current.style.bottom;
+      const formPosMobile = signUpFormRef.current.style.right;
+
+      if (screenWidth >= 768 && formPosDesktop !== "0px") {
+        gsap.to(signUpFormRef.current, {
+          duration: 0.7,
+          bottom: 0,
+          ease: Expo.easeOut,
+        });
+        gsap.to(".form-arrow", {
+          duration: 1,
+          rotationZ: 180,
+          transformOrigin: "center",
+          ease: Expo.easeOut,
+        });
+      } else if (screenWidth >= 768 && formPosDesktop === "0px") {
+        gsap.to(signUpFormRef.current, {
+          duration: 0.3,
+          bottom: hiddenFormBottom.current,
+          ease: Bounce.easeOut,
+        });
+        gsap.to(".form-arrow", {
+          duration: 0.7,
+          rotationZ: 0,
+          transformOrigin: "center",
+          ease: Expo.easeOut,
+        });
       }
-      return prevExpandedFields.filter((item) => item !== index);
-    });
-  };
 
-  const handleBlur = (e, index) => {
-    const { value } = e.target;
-    if (!value.trim()) {
-      setExpandedFields((prevExpandedFields) =>
-        prevExpandedFields.filter((item) => item !== index)
-      );
+      if (screenWidth < 768 && formPosMobile !== "0px") {
+        gsap.to(signUpFormRef.current, {
+          duration: 0.7,
+          right: 0,
+          ease: Expo.easeOut,
+        });
+        gsap.to(".form-arrow", {
+          duration: 1,
+          rotationZ: 180,
+          transformOrigin: "center",
+          ease: Expo.easeOut,
+        });
+      } else if (screenWidth < 768 && formPosMobile === "0px") {
+        gsap.to(signUpFormRef.current, {
+          duration: 0.3,
+          right: hiddenFormRight.current,
+          ease: Bounce.easeOut,
+        });
+        gsap.to(".form-arrow", {
+          duration: 0.7,
+          rotationZ: 0,
+          transformOrigin: "center",
+          ease: Expo.easeOut,
+        });
+      }
+    };
+
+    const contactButton = document.querySelector(".contact-button");
+    if (contactButton) {
+      contactButton.addEventListener("click", handleButtonClick);
     }
-  };
+
+    window.addEventListener("resize", handleResize);
+
+    // Initial call to handleResize to set the correct position on load
+    handleResize();
+
+    return () => {
+      if (contactButton) {
+        contactButton.removeEventListener("click", handleButtonClick);
+      }
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
-     <h1>Contact Me!</h1>
-      <div className="contact-form">
-       
-        <form>
-          <div
-            className={`field name-box ${
-              expandedFields.includes(0) ? "field-expanded" : ""
-            }`}
-            onMouseEnter={() => handleFieldHover(0)}
-            onMouseLeave={() => handleFieldHover(0)}
-            onClick={() => handleFieldClick(0)}
-          >
-            <input
-              className="text-area"
-              type="text"
-              id="name"
-              placeholder="Who Are You?"
-              onBlur={(e) => handleBlur(e, 0)}
-            />
-            <label htmlFor="name">Name</label>
-          </div>
-          <div
-            className={`field email-box ${
-              expandedFields.includes(1) ? "field-expanded" : ""
-            }`}
-            onMouseEnter={() => handleFieldHover(1)}
-            onMouseLeave={() => handleFieldHover(1)}
-            onClick={() => handleFieldClick(1)}
-          >
-            <input
-              className="text-area"
-              type="text"
-              id="email"
-              placeholder="Example@Email.com"
-              onBlur={(e) => handleBlur(e, 1)}
-            />
-            <label htmlFor="email">Email</label>
-          </div>
-          <div
-            className={`field message-box ${
-              expandedFields.includes(2) ? "field-expanded" : ""
-            }`}
-            onMouseEnter={() => handleFieldHover(2)}
-            onMouseLeave={() => handleFieldHover(2)}
-            onClick={() => handleFieldClick(2)}
-          >
-            <textarea
-              className="text-area"
-              placeholder="Your message goes here..."
-              id="message"
-              onBlur={(e) => handleBlur(e, 2)}
-            ></textarea>
-            <label htmlFor="message">Message</label>
-          </div>
-          <button className="contact-submit">Send</button>
-        </form>
+      <div id="signUpForm" ref={signUpFormRef} style={{ bottom: hiddenFormBottom.current, right: hiddenFormRight.current }}>
+        <div role="form" className="wpcf7" id="wpcf7-f276-o1" dir="ltr">
+          <div className="screen-reader-response"></div>
+          <form action="/#wpcf7-f276-o1" method="post" className="wpcf7-form" noValidate="noValidate">
+            <div style={{ display: "none" }}>
+              <input type="hidden" name="_wpcf7" value="276" />
+              <input type="hidden" name="_wpcf7_version" value="4.5.1" />
+              <input type="hidden" name="_wpcf7_locale" value="" />
+              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f276-o1" />
+              <input type="hidden" name="_wpnonce" value="3da6ca0018" />
+            </div>
+
+            <div className="contact-button">Contact Us <span className="form-arrow">&#9650;</span></div>
+
+            <p>
+              <span className="wpcf7-form-control-wrap your-name">
+                <input type="text" name="your-name" value="" size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" />
+              </span><br />
+              <span className="wpcf7-form-control-wrap your-email">
+                <input type="email" name="your-email" value="" size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" />
+              </span><br />
+              <span className="wpcf7-form-control-wrap your-phone">
+                <input type="text" name="your-phone" value="" size="40" className="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Phone (optional)" />
+              </span><br /><br />
+              <span className="wpcf7-form-control-wrap your-message">
+                <textarea name="your-message" cols="40" rows="10" className="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea>
+              </span>
+            </p>
+
+            <input type="submit" value="Send" className="wpcf7-form-control wpcf7-submit" />
+            <img className="" src="https://familyautoandtransmission.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style={{ visibility: "hidden" }} />
+
+            <div className="wpcf7-response-output wpcf7-display-none"></div>
+          </form>
+        </div>
       </div>
     </>
   );
