@@ -7,7 +7,7 @@ const Qualification = () => {
   return (
     <>
 
-<h1 className="Qtitle">Pure Css responsive <span>timeline</span></h1>
+<h1 className="Qtitle">Education<span>timeline</span></h1>
 
 <div class="Qcontainer">
 

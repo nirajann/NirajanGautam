@@ -11,6 +11,7 @@ import {
 import gsap from "gsap";
 import emailjs from "emailjs-com";
 import CV from '../assets/Docx/CV.docx'; 
+import Header from "../Layout/Header"
 
 const GetInTouch = () => {
   const [Email, setEmail] = useState("");
@@ -120,7 +121,8 @@ const GetInTouch = () => {
 
   return (
     <>
-    
+   <Header
+      />
 
       <div className="wrapper">
         <div className="hero">
