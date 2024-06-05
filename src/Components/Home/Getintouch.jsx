@@ -6,7 +6,8 @@ import {
   faYoutube,
   faLinkedin,
   faInstagram,
-  faGitSquare
+  faGitSquare,
+  faHooli
 } from "@fortawesome/free-brands-svg-icons";
 import gsap from "gsap";
 import emailjs from "emailjs-com";
@@ -156,26 +157,29 @@ const GetInTouch = () => {
    {/* <Header
       /> */}
 
+
 <nav class="navsab vertical">
+
+ 
   <ul>
     <li>
       <a href="#">
-        <i class="material-icons">Home</i>
+        <i class="material-icons"><h1 class="textnav" >Home</h1></i>
       </a>
     </li>
     <li>
-      <a href="#">
-         <i class="material-icons">Projects</i>
+      <a onClick={() => handleNavClick("Projects")} >
+         <i class="material-icons"><h1 class="textnav" >Projects</h1></i>
       </a>
     </li>
     <li>
       <a onClick={() => handleNavClick("Qualifiation")}>
-         <i class="material-icons">Education</i>
+         <i class="material-icons"><h1 class="textnav" >Education</h1></i>
       </a>
     </li>
     <li>
       <a onClick={() => handleNavClick("SendCv")}>
-         <i class="material-icons">Sendmail</i>
+         <i class="material-icons"><h1 class="textnav" >Sendmail</h1></i>
       </a>
     </li>
   </ul>

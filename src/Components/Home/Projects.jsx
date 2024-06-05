@@ -93,7 +93,7 @@ const Projects = () => {
                 <div className="p-container">
                     <div className="item" id="1">
                         <img className="p-img" src="https://images.unsplash.com/photo-1508124780861-b1687f9a13e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f841d43a63c085e930aa5b6b33e89a9f&auto=format&fit=crop&w=1385&q=80" alt=""></img>
-                        <div className="p-text">
+                        <div className="text">
                             <h3>PROJECT 1</h3>
                             <p>Short Description</p>
                         </div>

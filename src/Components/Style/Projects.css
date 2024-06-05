@@ -53,15 +53,6 @@
     opacity: 0.6;
 }
 
-.p-text {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    color: #01A2AC;
-    transition: all 0.35s ease-in-out;
-}
 
 .p-text h3 {
     color: black;

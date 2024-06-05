@@ -12,7 +12,6 @@ const Home = () => {
     <>
       <Header
       />
-
       <section id="About">
         <About />
       </section>

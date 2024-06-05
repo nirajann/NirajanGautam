@@ -232,3 +232,12 @@
   margin: 10px;
   border-radius: 5px;
 }
+
+
+@media (min-width: 241px) and (max-width: 319px) {
+  .about-me .about-me-container .about-me-title {
+    font-size: 30px;
+    color: #87A4B6;
+    font-weight: 700;
+}
+}

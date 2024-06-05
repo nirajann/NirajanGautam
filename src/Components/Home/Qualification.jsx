@@ -42,7 +42,7 @@ const Qualification = () => {
       <div class="marker"></div>
       <div class="timeline-content">
          <h3>Master</h3>
-         <span>Processing For Austrilia</span>
+         <span>Processing For Australia</span>
          <p>pending...</p>
       </div>
    </div>

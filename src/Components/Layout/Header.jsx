@@ -117,6 +117,7 @@ const Header = ({ scrollToContact }) => {
 
   return (
     <>
+        <div id="mouse-trail" className="mouse-trail"></div>
       <header className="cd-header">
         <div className="header-wrapper">
           <div className="logo-wrap">
@@ -135,11 +136,10 @@ const Header = ({ scrollToContact }) => {
       <div className="nav">
         <div className="nav__content">
           <ul className="nav__list">
-            <li className="nav__list-item active-nav"><a href="#" className="hover-target">Home</a></li>
-            <li className="nav__list-item"><a href="#" className="hover-target">Portfolio</a></li>
+            <li className="nav__list-item"><a href="#/getintouch" className="hover-target">Portfolio</a></li>
             <li className="nav__list-item"><a onClick={() => handleNavClick("About")} className="hover-target">About</a></li>
             <li className="nav__list-item"><a href="" className="hover-target">Blog</a></li>
-            <li className="nav__list-item"><a onClick={() => handleNavClick("Contact")} className="hover-target" >Contact</a></li>
+         
           </ul>
         </div>
       </div>
@@ -207,6 +207,8 @@ const Header = ({ scrollToContact }) => {
       <div className='cursor' id="cursor"></div>
       <div className='cursor2' id="cursor2"></div>
       <div className='cursor3' id="cursor3"></div>
+
+  
     </>
   );
 };

@@ -27,6 +27,11 @@ a:hover {
 	text-decoration: none;
 }
 
+
+
+
+
+
 /* #Cursor
 ================================================== */
 
@@ -975,15 +980,36 @@ body.light .switch-wrap p span:nth-child(1):before {
      .tooltip-cont .tt-text {
       width: 238px;
     }
+
+    .headerWrapper h1 {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 400;
+      animation: 1.5s fadeInTitle ease;
+  }
   }
   @media (min-width: 320px) and (max-width: 767px) {
      .tooltip-cont .tt-text {
       width: 318px;
     }
+
+    .headerWrapper h1 {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 700;
+      animation: 1.5s fadeInTitle ease;
+  }
   }
   @media (min-width: 768px) {
      .tooltip-cont .tt-text {
       width: 450px;
     }
+
+    .headerWrapper h1 {
+      color: #fff;
+      font-size: 80px;
+      font-weight: 900;
+      animation: 1.5s fadeInTitle ease;
+  }
   }
 
