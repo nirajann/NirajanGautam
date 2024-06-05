@@ -115,6 +115,7 @@ a:hover {
 	cursor: pointer;
 }
 .logo-wrap a {
+  text-decoration: none;
 	cursor: pointer;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 900;

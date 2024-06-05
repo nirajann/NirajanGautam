@@ -13,6 +13,7 @@ import emailjs from "emailjs-com";
 import CV from '../assets/Docx/CV.docx'; 
 import { animateScroll as scroll } from "react-scroll";
 import Qualifiation from "../Home/Qualification"
+import Projects from "../Home/Projects"
 
 const GetInTouch = () => {
   const [Email, setEmail] = useState("");
@@ -237,7 +238,9 @@ const GetInTouch = () => {
           <FontAwesomeIcon className="i" icon={faInstagram} />
         </a>
       </div>
-
+      <section id="Projects">
+        <Projects />
+      </section>
       <section id="Qualifiation">
         <Qualifiation />
       </section>

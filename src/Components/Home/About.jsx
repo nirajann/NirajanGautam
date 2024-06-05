@@ -25,10 +25,8 @@ const About = () => {
         </div>
         <div class="about-me-content">
 
-          <div class="logo"><img className='a-image aboutlogo' src={logo} alt="smit"></img></div>
-
           <div class="text">
-          Crafting beauty from simplicity, Nirajan brings innovation to life. With a keen eye for detail, he turns concepts into captivating creations, making the ordinary exceptional.
+          Hello! I’m Nirajan Gautam, a recent graduate with a degree in [Your Degree] from [Your University]. I specialize in web and mobile development, with expertise in HTML, CSS, JavaScript, Swift, and Kotlin. I'm passionate about technology and always eager to learn and innovate. Explore my portfolio to see my work and get in touch!
           </div>
         </div>
       </div>
