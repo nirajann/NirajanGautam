@@ -2,45 +2,59 @@ import React, { useEffect } from "react";
 import "../Style/Projects.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import kalikashine from "../assets/image/Kalikashine.png"
+import Easybuy from "../assets/image/easybuy.jpeg"
+import Passportpal from "../assets/image/Passportpal.png"
+import mern from "../assets/image/mern.jpg"
+import insta from "../assets/image/insta.jpg"
+import Artwallpaper from "../assets/image/Art Wallpaper.png"
+import Capmart from "../assets/image/capmart.png"
 
 const Projects = () => {
     useEffect(() => {
         var modalInfo = {
             1: {
                 title: "Project 1",
-                info: "...",
-                link: "#",
-                github: "#"
+                info: "Company Project with react and full deployment",
+                link: "https://www.kalikashineservice.com.np/",
+                github: "https://github.com/nirajann/KalikashineService.git"
             },
             2: {
-                title: "Project 2",
-                info: "...",
+                title: "UrbanSage",
+                info: "ecommerce website for with full security features using Mern",
                 link: "#",
-                github: "#"
+                github: "https://github.com/nirajann/Urbansage.git"
             },
             3: {
-                title: "Project 3",
-                info: "...",
-                link: "#",
-                github: "#"
+                title: "PassportPal",
+                info: "Education App built using Flutter and Firebase for final Project",
+                link: "https://github.com/nirajann/PassportPal.git",
+                github: "https://github.com/nirajann/PassportPal.git"
             },
             4: {
-                title: "Project 4",
-                info: "....",
+                title: "Easy Buy",
+                info: "Ecommerce Webiste Using Pythong Django",
                 link: "#",
                 github: "#"
             },
             5: {
-                title: "Project 5",
-                info: "...",
-                link: "#",
-                github: "#"
+                title: "Instagram Clone",
+                info: "Instagram Flutter Clone Using Firebase and Flutter",
+                link: "https://github.com/nirajann/Instagramflutter-clone.git",
+                github: "https://github.com/nirajann/Instagramflutter-clone.git"
             },
+       
             6: {
-                title: "Project 6",
-                info: "...",
-                link: "#",
-                github: "#"
+                title: "Capmart",
+                info: "Ecommerce App using Flutter and Firebase",
+                link: "https://github.com/nirajann/Ecommerce-capmart.git",
+                github: "https://github.com/nirajann/Ecommerce-capmart.git"
+            },
+            7: {
+                title: "Art Wallpaper ",
+                info: "Wallpaer App using Kotling and Firebase",
+                link: "Wallpaer App using Kotling and Firebase",
+                github: "https://github.com/nirajann/WallapaperApp.git"
             }
         };
 
@@ -92,50 +106,58 @@ const Projects = () => {
                 <h1 className="p-h1">Projects</h1>
                 <div className="p-container">
                     <div className="item" id="1">
-                        <img className="p-img" src="https://images.unsplash.com/photo-1508124780861-b1687f9a13e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f841d43a63c085e930aa5b6b33e89a9f&auto=format&fit=crop&w=1385&q=80" alt=""></img>
+                        <img className="p-img" src={kalikashine} alt=""></img>
                         <div className="text">
-                            <h3>PROJECT 1</h3>
-                            <p>Short Description</p>
+                            <h3>Kalika Shine Service</h3>
+                            <p>Company Project using REACT</p>
                         </div>
                         <div className="p-button">Learn More</div>
                     </div>
                     <div className="item" id="2">
-                        <img className="p-img" src="https://images.unsplash.com/photo-1496492352121-593138d42a61?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3542849cc0459345e3aa82a90ae51a01&auto=format&fit=crop&w=1350&q=80" alt=""></img>
+                        <img className="p-img" src={mern} alt=""></img>
                         <div className="text">
-                            <h3>PROJECT 2</h3>
-                            <p>Short Description</p>
+                            <h3>Security Project</h3>
+                            <p>Backend Admin Panel using Mern</p>
                         </div>
                         <div className="p-button">Learn More</div>
                     </div>
                     <div className="item" id="3">
-                        <img className="p-img" src="https://images.unsplash.com/photo-1515215676803-119c88d493cf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=baf00747bfb9fe41ad9af8cf00dbebbf&auto=format&fit=crop&w=1350&q=80" alt=""></img>
+                        <img className="p-img" src={Passportpal} alt=""></img>
                         <div className="text">
-                            <h3>PROJECT 3</h3>
-                            <p>Short Description</p>
+                            <h3>Passportpal</h3>
+                            <p>Final Year Project Using Flutter and Firebase</p>
                         </div>
                         <div className="p-button">Learn More</div>
                     </div>
                     <div className="item" id="4">
-                        <img className="p-img" src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5e3be993a88feed38e4f5374ff3ba115&auto=format&fit=crop&w=1350&q=80g" alt=""></img>
+                        <img className="p-img" src={Easybuy} alt=""></img>
                         <div className="text">
-                            <h3>PROJECT 4</h3>
-                            <p>Short Description</p>
+                            <h3>Easy Buy</h3>
+                            <p>E-commerce webiste using Django</p>
                         </div>
                         <div className="p-button">Learn More</div>
                     </div>
                     <div className="item" id="5">
-                        <img className="p-img" src="https://images.unsplash.com/photo-1504875427817-937a8a12e167?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cd7f399ba43093ead08e7dbf5e083f09&auto=format&fit=crop&w=1434&q=80" alt=""></img>
+                        <img className="p-img" src={insta} alt=""></img>
                         <div className="text">
-                            <h3>PROJECT 5</h3>
+                            <h3>Instagram Clone Using Flutter and Firebase</h3>
                             <p>Short Description</p>
                         </div>
                         <div className="p-button">Learn More</div>
                     </div>
                     <div className="item" id="6">
-                        <img className="p-img" src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f758b0379f730e73c03b6153aaad7cf1&auto=format&fit=crop&w=1350&q=80" alt=""></img>
+                        <img className="p-img" src={Capmart} alt=""></img>
                         <div className="text">
-                            <h3>PROJECT 6</h3>
-                            <p>Short Description</p>
+                            <h3>Capmart</h3>
+                            <p>Ecommerce using Flutter</p>
+                        </div>
+                        <div className="p-button">Learn More</div>
+                    </div>
+                    <div className="item" id="6">
+                        <img className="p-img" src={Artwallpaper} alt=""></img>
+                        <div className="text">
+                            <h3>Wallpaper App</h3>
+                            <p>Wallpaper App using kotlin</p>
                         </div>
                         <div className="p-button">Learn More</div>
                     </div>
