@@ -32,7 +32,7 @@ const Qualification = () => {
    <div class="timeline-block timeline-block-right">
       <div class="marker"></div>
       <div class="timeline-content">
-         <h3>UnderGraduate</h3>
+         <h3>Bsc.(Hons) Computing</h3>
          <span>Softwarica College</span>
          <p>Passed Date : 2023</p>
       </div>
@@ -41,9 +41,9 @@ const Qualification = () => {
    <div class="timeline-block timeline-block-left">
       <div class="marker"></div>
       <div class="timeline-content">
-         <h3>Master</h3>
-         <span>Processing For Australia</span>
-         <p>pending...</p>
+         <h3>Master In Information and Communication</h3>
+         <span>Western Sydney Unievrsity</span>
+         <p>Start Date : July 2024</p>
       </div>
    </div>
 

@@ -26,7 +26,7 @@ const About = () => {
         <div class="about-me-content">
 
           <div class="text">
-          Hello! I’m Nirajan Gautam, a recent graduate with a degree in [Your Degree] from [Your University]. I specialize in web and mobile development, with expertise in HTML, CSS, JavaScript, Swift, and Kotlin. I'm passionate about technology and always eager to learn and innovate. Explore my portfolio to see my work and get in touch!
+          Hello! I’m Nirajan Gautam, a recent graduate with a degree in Bsc.(Hons) Computing from Coventry University. I specialize in web and mobile development, with expertise in HTML, CSS, JavaScript, Swift, and SQL. I'm passionate about technology and always eager to learn and innovate. Explore my portfolio to see my work and get in touch!
           </div>
         </div>
       </div>
